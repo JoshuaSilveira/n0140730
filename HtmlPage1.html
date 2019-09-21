@@ -7,43 +7,66 @@
 <body>
     <h1>ROCK CONCERT INCIDENT REPORT</h1>
     <form method="post" action="https://postman-echo.com/post">
-        <h2>Report Filled out by:</h2>
-        <input type="text" id="reporter" name="reporter" />
+        <section>
+            <h2>Report Filled out by:</h2>
+            <input type="text" id="reporter" name="reporter" />
+        </section>
 
-        <h2>Date of incident</h2>
-        <input type="date" id="incident_date" name="incident_date" />
+        <section>
+            <h2>Date of incident</h2>
+            <input type="date" id="incident_date" name="incident_date" />
+        </section>
 
-        <h2>Approximate time of incident</h2>
-        <input type="time" id="incident_time" name="incident_time"/>
+        <section>
+            <h2>Approximate time of incident</h2>
+            <input type="time" id="incident_time" name="incident_time" />
+        </section>
 
-        <h2>Damage to venue and/or physical harm to person(s)</h2>
-        <input type="checkbox" value="venue_damage" id="venue_damage" name="venue_damage" />
-        <label for="venue_damage">Venue is damaged.</label>
-        <input type="checkbox" value="physical_harm" id="physical_harm" name="physical_harm" />
-        <label for="physical_harm">Person(s) are injured.</label>
-        
-        <h2>Incident Location</h2>
-        <select id="location" name="location">
-            <option value="stage_1">Front stage</option>
-            <option value="stage_2">Right side stage</option>
-            <option value="stage_3">Left Side stage</option>
-            <option value="concession">Concession Stand</option>
-            <option value="merch_booth">Merchandise Booth</option>
-        </select>
+        <section>
+            <h2>Damage to venue and/or physical harm to person(s)</h2>
+            <input type="checkbox" value="venue_damaged" id="venue_damage" name="venue_damage" />
+            <label for="venue_damage">Venue is damaged.</label>
+            <input type="checkbox" value="person_injured" id="physical_harm" name="physical_harm" />
+            <label for="physical_harm">Person(s) are injured.</label>
+        </section>
 
+        <section>
+            <h2>Incident Location</h2>
+            <select id="location" name="location">
+                <option value="stage_front">Front stage</option>
+                <option value="stage_front">Right side stage</option>
+                <option value="stage_left">Left Side stage</option>
+                <option value="concession">Concession Stand</option>
+                <option value="merch_booth">Merchandise Booth</option>
+            </select>
+        </section>
 
-        <h2>Paramedics neccesarry</h2>
-        <input type="radio" value="paramedics_true" id="medic_option_1" name="medic_option_1" />
-        <label for="medic_option_1">Paramedics were required.</label>
-        <input type="radio" value="paramedics_false" id="medic_option_2" name="medic_option_2" />
-        <label for="medic_option_1">No paramedics were required.</label>
-        
+        <section>
+            <h2>Paramedics neccesary</h2>
+            <input type="radio" value="paramedics_true" id="medic_option_1" name="medic_option_1" />
+            <label for="medic_option_1">Paramedics were required.</label>
+            <input type="radio" value="paramedics_false" id="medic_option_2" name="medic_option_2" />
+            <label for="medic_option_2">No paramedics were required.</label>
+        </section>
 
-        <h2>Incident Description</h2>
-        <textarea row="5" cols="100" id="incident_description_textarea" name="incident_description_text_area">Please be as descriptive as possible, include times and names of those involved if applicable.</textarea>
-        <div>
+        <section>
+            <h2>Police neccesary</h2>
+            <input type="radio" value="police_true" id="police_option_1" name="police_option_1" />
+            <label for="police_option_1">Police were required.</label>
+            <input type="radio" value="police_false" id="police_option_2" name="police_option_2" />
+            <label for="police_option_2">No police were required.</label>
+        </section>
+
+        <section>
+            <h2>Incident Description</h2>
+            <textarea row="5" cols="100" id="incident_description_textarea" name="incident_description_text_area">
+                Please be as descriptive as possible, include times and names of those involved if applicable.
+            </textarea>
+        </section>
+
+        <section>
             <input type="submit" value="Submit Incident" />
-        </div>
+        </section>
 
     </form>
 
